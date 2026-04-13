@@ -34,6 +34,24 @@ Prints either a string value (in quotes) or a variable value.
 <p>
 Used to define variables.
 </p>
+<h3>1. Print statement</h3>
+
+<pre>
+&gt;EGG SHOW 'content' / var
+</pre>
+
+<p>
+Prints either a string value (in quotes) or a variable value.
+</p>
+<h3>3. exit from interpreter</h3>
+
+<pre>
+&gt;exit
+</pre>
+
+<p>
+exits from the interpreter(exit from loop)
+</p>
 
 <h2>Supported Data Types</h2>
 
