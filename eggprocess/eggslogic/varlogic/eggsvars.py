@@ -11,6 +11,9 @@ def makestr(name, value):
 def identifyvar(name, value, vtype):
   if vtype == "STR" and value.startswith("'") and value.endswith("'"):
     makestr(name, value)
+  elif vtype == "STR" and (vtype[0] != "'" or vtype[-1] != "'"):
+    print("invalid str ")
+  
 
 def varshow(name):
   if name in VARS:
