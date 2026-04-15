@@ -6,7 +6,7 @@ print("Welcome to egg interpreter, \n'eggs' to get the cmds \n'about' to know mo
 
 while True:
   a = input("/>")
-  if a == "ex":
+  if a == "EGG EXIT":
     break
   else:
     chekvalidation(a)

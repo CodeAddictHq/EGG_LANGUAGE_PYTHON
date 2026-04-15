@@ -18,11 +18,11 @@ EGG is a minimal language interpreter built using Python. It is designed for bas
 <h3>1. Print statement</h3>
 
 <pre>
-&gt;EGG SHOW 'content' / var
+&gt;EGG SHOW 'content'
 </pre>
 
 <p>
-Prints either a string value (in quotes) or a variable value.
+Prints a string value (in single quotes)
 </p>
 
 <h3>2. Variable declaration</h3>
@@ -34,19 +34,19 @@ Prints either a string value (in quotes) or a variable value.
 <p>
 Used to define variables.
 </p>
-<h3>1. Print statement</h3>
+<<h3>1. Print statement</h3>
 
 <pre>
-&gt;EGG SHOW 'content' / var
+&gt;EGG SHOW VAR varname
 </pre>
 
 <p>
-Prints either a string value (in quotes) or a variable value.
+Prints a var if that exists
 </p>
 <h3>3. exit from interpreter</h3>
 
 <pre>
-&gt;exit
+&gt;EGG EXIT
 </pre>
 
 <p>
