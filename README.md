@@ -12,6 +12,11 @@ EGG is a minimal language interpreter built using Python. It is designed for bas
 </ul>
 
 <p>This project is purely educational and experimental.</p>
+<h2>How to run (for those who don't know how to use github)</h2>
+<p>Just download all this files and keep the directory and files name as same as repo than change you terminal dir to the main folder where you have stored all this files and folders and run the egg.py with this cmd</p>
+<pre>
+&gt;python egg.py
+</pre>
 
 <h2>Syntax</h2>
 
