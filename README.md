@@ -72,7 +72,7 @@ Shows vars TYPE if that exists
 
 <ul>
   <li><b>STR</b> → for text values</li>
-  <li><b>NUMBER</b> → for numeric values</li>
+  <li><b>NUM</b> → for numeric values</li>
   <li><b>BOOL</b> → for boolean values</li>
 </ul>
 
