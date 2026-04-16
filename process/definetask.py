@@ -6,6 +6,12 @@ sys.path.append(os.path.abspath("../functions"))
 sys.path.append(os.path.abspath("../DB"))
 from DB import db
 
+TYPES = [
+  "STR",
+  "NUM",
+  "BOOL",
+  "NONE"
+]
 
 from functions import show
 
@@ -15,22 +21,31 @@ def makestr(txt):
   
 def findvalue(txt):
   value = txt.split("=")
-  return value[1].strip()
+  try:
+    value = value[-1].strip()
+    return value
+  except:
+    print(f"invalid code : >>> '{txt}'")
 def findname(txt):
   value = txt.split("=")
   return value[0].strip()
   
 def valueconvert(val, tp):
-  if tp=="STR" and val.startswith("'") and val.endswith("'"):
-    return makestr(val)
-  elif tp == "BOOL":
-    return bool(makestr(val))
-  elif tp == "NUM":
-    return float(val)
-  elif tp == "NONE":
-    val = None
-    return val
-  
+  try:
+    
+    if tp=="STR " and val.startswith("'") and val.endswith("'"):
+      return makestr(val)
+    elif tp == "BOOL":
+      return bool(makestr(val))
+    elif tp == "NUM":
+      return float(val)
+    elif tp == "NONE":
+      val = None
+      return val
+    else:
+      print(f"invalid code : TYPE DOESNT EXISTS>> '{tp}'")
+  except:
+    print(f"invalid code : CANT CONVERT'{val}>>>{tp}'")
   
 
 def createshow(codes):
@@ -38,7 +53,7 @@ def createshow(codes):
   val = code[1]
   if val.startswith("'") and val.endswith("'"):
     show.showcontent(makestr(val))
-  elif val.startswith('"') and val.endswith("'"):
+  elif val.startswith('"') and val.endswith('"'):
     show.showcontent(makestr(val))
   else:
     show.showvar(val)
@@ -47,11 +62,24 @@ def createshow(codes):
 def createvar(codes):
 
   code = codes.split(" ", 2)
-  vartype = code[1]
-  name = findname(code[-1])
-  value = findvalue(code[-1])
-  value = valueconvert(value, vartype)
-  db.assignvar(name, value)
+
+  for i in code:
+    if i == "":
+      code.remove(i)
+  if len(code)==3:
+    if "=" not in code[2]:
+      code = []
+    else:
+    
+      vartype = code[1]
+      name = findname(code[-1])
+      value = findvalue(code[-1])
+      value = valueconvert(value, vartype)
+      
+      db.assignvar(name, value)
+  
+  else:
+    print(f"invalid code : VAR assign error >>> '{codes}'")
   
   
   
@@ -74,6 +102,15 @@ def gentype(codes):
 
 def genfor(codes):
   pass
+
+def createtype(code):
+  var = code.split(" ")[1]
+  print("varname sent")
+  db.showtype(var)
+  
+def createlen(code):
+  var = code.split(" ")[1]
+  db.showlen(var)
 
   
   
