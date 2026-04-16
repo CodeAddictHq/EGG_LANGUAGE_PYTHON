@@ -33,7 +33,9 @@ def findname(txt):
 def valueconvert(val, tp):
   try:
     
-    if tp=="STR " and val.startswith("'") and val.endswith("'"):
+    if tp=="STR" and val.startswith("'") and val.endswith("'"):
+      return makestr(val)
+    if tp=="STR" and val.startswith('"') and val.endswith('"'):
       return makestr(val)
     elif tp == "BOOL":
       return bool(makestr(val))
@@ -43,9 +45,9 @@ def valueconvert(val, tp):
       val = None
       return val
     else:
-      print(f"invalid code : TYPE DOESNT EXISTS>> '{tp}'")
+      print(f"INVALID CODE : TYPE DOESNT EXISTS>> '{tp}' ")
   except:
-    print(f"invalid code : CANT CONVERT'{val}>>>{tp}'")
+    print(f"INVALID CODE : CANT CONVERT'{val}>>>{tp}'")
   
 
 def createshow(codes):
@@ -79,29 +81,11 @@ def createvar(codes):
       db.assignvar(name, value)
   
   else:
-    print(f"invalid code : VAR assign error >>> '{codes}'")
+    print(f"INVALID CODE : ASSIGN ERROR >> {codes}")
   
   
-  
-  
-  
-    
-def genvar(codes):
-  vartype = codes[2]
-  name = codes[3]
-  value = codes[5].strip()
-  eggsvars.identifyvar(name, value, vartype)
   
 
-def genshowvar(codes):
-  varname = codes[2]
-  eggsvars.varshow(varname)
-
-def gentype(codes):
-  pass
-
-def genfor(codes):
-  pass
 
 def createtype(code):
   var = code.split(" ")[1]

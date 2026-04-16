@@ -5,7 +5,6 @@ VARS = {
 
 def assignvar(name, val):
   VARS[name] = val
-  print(VARS)
   
 def showtype(var):
   var = str(var)

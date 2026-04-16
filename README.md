@@ -1,7 +1,7 @@
 <h1>EGG_LANGUAGE_PYTHON</h1>
 
 <p>
-EGG is a minimal language interpreter built using Python. It is designed for basic learning and experimentation, focusing only on variable storage and output printing. It is not intended for production use.
+EGG is a minimal language interpreter built using Python. It is designed for basic learning and experimentation, focusing only on variable storage and output printing. It is not intended for production use or any perpose just buult for .
 </p>
 
 <h2>Overview</h2>
@@ -11,9 +11,9 @@ EGG is a minimal language interpreter built using Python. It is designed for bas
   <li>Declaring simple variables with basic types</li>
 </ul>
 
-<p>This project is purely educational and experimental.</p>
-<h2>How to run (for those who don't know how to use github)</h2>
-<p>Just download all this files and keep the directory and files name as same as repo than change you terminal dir to the main folder where you have stored all this files and folders and run the egg.py with this cmd</p>
+
+<h2>How to run</h2>
+<p>Just download all this files and keep the directory and files name as same as repo than change you terminal dir to the main folder where you have stored all this files and folders(if you don't know how to ise git) and <h3>run the egg.py</h3> with this cmd</p>
 <pre>
 &gt;python egg.py
 </pre>
@@ -23,7 +23,7 @@ EGG is a minimal language interpreter built using Python. It is designed for bas
 <h3>1. Print statement</h3>
 
 <pre>
-&gt;EGG SHOW 'content'
+&gt;SHOW 'content'/var
 </pre>
 
 <p>
@@ -33,31 +33,41 @@ Prints a string value (in single quotes)
 <h3>2. Variable declaration</h3>
 
 <pre>
-&gt;EGG VAR type varname = value
+&gt;VAR type varname = value
 </pre>
 
 <p>
 Used to define variables.
 </p>
-<<h3>1. Print statement</h3>
 
-<pre>
-&gt;EGG SHOW VAR varname
-</pre>
 
-<p>
-Prints a var if that exists
-</p>
 <h3>3. exit from interpreter</h3>
 
 <pre>
-&gt;EGG EXIT
+&gt;EXIT
 </pre>
 
 <p>
 exits from the interpreter(exit from loop)
 </p>
+<h3>4. Show length</h3>
 
+<pre>
+&gt;LEN var
+</pre>
+
+<p>
+Shows vars length if that exists
+</p>
+<h3>5. Show Type</h3>
+
+<pre>
+&gt;TYPE var
+</pre>
+
+<p>
+Shows vars TYPE if that exists
+</p>
 <h2>Supported Data Types</h2>
 
 <ul>
@@ -72,4 +82,5 @@ exits from the interpreter(exit from loop)
   <li>This language is intentionally minimal.</li>
   <li>Built as a Python learning project.</li>
   <li>No loops, functions, or file handling are included.</li>
+  <li>i have plane to add for loop, list and dict i am working on it </li>
 </ul>

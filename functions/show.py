@@ -10,10 +10,10 @@ def showcontent(code):
   print(code)
   
 def showvar(name):
-  for var in VARS:
-    if var == name:
-      print(VARS[name])
-      break
-    else:
-      print("var not found", name)
-      break
+  var = str(name)
+
+  if var in VARS.keys():
+    print(VARS[var])
+  else:
+    print(f"INVALID CODE : VAR NOT FOUND >> '{name}'")
+  
