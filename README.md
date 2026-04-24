@@ -1,7 +1,7 @@
 <h1>EGG_LANGUAGE_PYTHON</h1>
 
 <p>
-EGG is a minimal language interpreter built using Python. It is designed for basic learning and experimentation, focusing only on variable storage and output printing. It is not intended for production use or any perpose just buult for .
+EGG is a minimal language interpreter built using Python. It is designed for basic learning and experimentation(I just wanted to know how programing languages logic are defined), focusing only on variable storage and output printing. It is not intended for production use or any perpose just buult for .
 </p>
 
 <h2>Overview</h2>
